@@ -1,4 +1,4 @@
-# Hi I am Hadassah 👋
+# Hi I am Motunrayo Osho
 ## Data Analyst & Web Developer
 
 I am a Data Analyst and upcoming Web Developer based in Nigeria.
