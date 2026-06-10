@@ -38,7 +38,7 @@ This analysis aims to answer the following questions:
 ### Project Files
 
 - [SQL Queries](healthcare_analysis.sql)
-- [Dataset](healthcare_dataset.xlsx)
+- [Dataset](Nigerian_Healthcare_Data.xlsx)
 - [Power BI Dashboard](healthcare_dashboard.pbix)
 
 
