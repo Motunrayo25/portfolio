@@ -74,7 +74,7 @@ The dataset was reviewed and prepared for analysis by:
 - Checking for duplicate records
 - Standardizing date formats
 - Formatting treatment cost values
-- Prepared data for SQL analysis and Power BI visualization
+- Structured dataset for SQL analysis and Power BI reporting
   
 ## SQL Analysis
 
