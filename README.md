@@ -179,6 +179,7 @@ The cleaned dataset was imported into Power BI to create an interactive dashboar
 - Payment Method Distribution
 - Patient Admissions by State
 - Monthly Admission Trends
+- Average Treatment Cost by Hospital Type
 
 ### Interactive Features
 
@@ -190,11 +191,22 @@ The cleaned dataset was imported into Power BI to create an interactive dashboar
 
 ## Dashboard Preview
 
-### Overview Dashboard
+The dashboard is organized into three pages: Overview, Cost & Geographic Analysis and Insights & Recommendations.
+
+### Overview dashboard
+
+This page shows a summary of healthcare trends in Nigeria, including patient distribution, payment methods and monthly admissions
 ![Dashboard Screenshot](images/dashboard_overview.png)
 
-### State Analysis Dashboard
-![Dashboard Screenshot](images/dashboard_state_analysis.png)
+### Cost and Geographic Analysis
+
+This page explores treatment cost differences across diagnoses and states, highlighting regional demand patterns.
+
+
+### Insights & Recommendations
+
+This page summarizes key findings and provides recommendations for healthcare improvement.
+
 
 ## 📈 Key Insights
 
