@@ -198,9 +198,9 @@ The cleaned dataset was imported into Power BI to create an interactive dashboar
 
 ## 📈 Key Insights
 
-- Malaria was the most common diagnosis, accounting for 17% of all patients.
-- Heart Disease recorded the highest average treatment cost.
-- Private hospitals charged approximately 70% more than public hospitals.
+- Malaria was the most common diagnosis, accounting for 17% of all admissions.
+- Heart Disease recorded the highest average treatment cost at ₦872,781.
+- Private hospitals cost approximately 70% more than public hospitals.
 - Tuberculosis had the highest mortality rate (41.2%).
 - Patients aged 46–60 represented the largest admission group.
 - HMO was the most frequently used payment method.
@@ -210,13 +210,13 @@ The cleaned dataset was imported into Power BI to create an interactive dashboar
 
 ## 💡 Recommendations
 
-- Strengthen malaria prevention programs, especially in high-admission states  
-- Expand access to health insurance schemes to reduce out-of-pocket payments  
-- Improve funding and infrastructure in public hospitals to reduce the cost gap with private facilities  
+- Strengthen malaria prevention programs, especially in high-admission states. 
+- Expand access to health insurance schemes to reduce out-of-pocket payments.  
+- Improve funding and infrastructure in public hospitals to reduce the cost gap with private facilities.  
 - Focus healthcare interventions on chronic diseases such as heart disease, stroke, and kidney disease due to their high mortality rates  
-- Increase early diagnosis and treatment programs for tuberculosis to reduce long hospital stays and mortality rates  
-- Address regional healthcare disparities by improving facilities in high-burden but lower-resource states  
-- Promote preventive healthcare to reduce long-term treatment costs and hospital admissions  
+- Increase early diagnosis and treatment programs for tuberculosis to reduce long hospital stays and mortality rates.  
+- Address regional healthcare disparities by improving facilities in high-burden but lower-resource states.  
+- Promote preventive healthcare to reduce long-term treatment costs and hospital admissions.  
 
 ## 📬 Contact Me
 - 📧 Email: oshomotunrayo647@gmail.com
