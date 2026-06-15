@@ -1,6 +1,8 @@
 # Hi I am Motunrayo Osho
 ## Data Analyst (Excel | SQL | Power BI)
 
+Data Analyst based in Nigeria with a knack for transforming messy datasets into clear, interactive business strategies. Proficient in executing end-to-end data pipelines using Excel, SQL, and Power BI. Open to global remote roles.
+
 I am a Data Analyst based in Nigeria, focused on transforming data into actionable insights using Excel, SQL, and Power BI.
 Open to remote Data Analyst opportunities worldwide.
 
@@ -15,6 +17,8 @@ Open to remote Data Analyst opportunities worldwide.
 ### 📊 Data Analysis
 
 ## 🏥 Nigerian Healthcare Patient Analysis Dashboard
+
+[![Project Status: Completed](https://img.shields.io/badge/Project%20Status-Completed-success)](https://github.com/Motunrayo25)
 
 ### 📌 Project Overview
 This project analyzes 1,000 Nigerian healthcare patient records across 30 states to uncover insights on diagnoses, treatment costs, payment methods and patient outcomes.
@@ -52,7 +56,7 @@ Dataset characteristics:
 - Data period: October 2025 – April 2026
 - Variables include patient demographics, diagnosis, treatment cost, hospital type, payment method, length of stay and treatment outcome
   
-## Excel Data Preparation
+## Data Preprocessing (Excel) 
 
 The Excel file is structured into three sheets:
 
@@ -66,16 +70,9 @@ The Excel file is structured into three sheets:
 - Standardized date formats
 - Formatted treatment cost values
 - Built pivot tables for diagnosis, cost and demographic summaries
-
-### 🧹 Data Cleaning (Excel)
-
-The dataset was reviewed and prepared for analysis by:
-- Checking for missing values
-- Checking for duplicate records
-- Standardizing date formats
-- Formatting treatment cost values
 - Structured dataset for SQL analysis and Power BI reporting
-  
+
+
 ## SQL Analysis
 
 ### SQL Techniques Used
@@ -177,7 +174,7 @@ The cleaned dataset was imported into Power BI to create an interactive dashboar
 - Patient Count by Diagnosis
 - Average Treatment Cost by Diagnosis
 - Payment Method Distribution
-- Patient Admissions by State
+- Top 10 States by Patient Admissions
 - Monthly Admission Trends
 - Average Treatment Cost by Hospital Type
 
@@ -185,30 +182,33 @@ The cleaned dataset was imported into Power BI to create an interactive dashboar
 
 - State filtering
 - Diagnosis filtering
-- Dynamic KPI updates
-- Interactive visual cross-filtering
-
 
 ## Dashboard Preview
 
-The dashboard is organized into three pages: Overview, Cost & Geographic Analysis and Insights & Recommendations.
+A 3-page interactive dashboard was built featuring:
+- KPI cards (Total Patients, Costs, Recovery & Mortality Rates)
+- Interactive State and Diagnosis filters
+- Cross-filtering across all visuals
 
-### Overview dashboard
+### Page 1 — Overview
 
 This page shows a summary of healthcare trends in Nigeria, including patient distribution, payment methods and monthly admissions
-![Dashboard Screenshot](images/dashboard_overview.png)
 
-### Cost and Geographic Analysis
+![Dashboard Overview](dashboard_overview.png)
+
+### Page 2 — Geo-Costs
 
 This page explores treatment cost differences across diagnoses and states, highlighting regional demand patterns.
 
+![Geo Costs](dashboard_geo_costs.png)
 
-### Insights & Recommendations
+### Page 3 — Insights & Recommendations
 
 This page summarizes key findings and provides recommendations for healthcare improvement.
 
+![Insights](dashboard_insights.png)
 
-## 📈 Key Insights
+## 💡 Key Insights
 
 - Malaria was the most common diagnosis, accounting for 17% of all admissions.
 - Heart Disease recorded the highest average treatment cost at ₦872,781.
@@ -219,8 +219,7 @@ This page summarizes key findings and provides recommendations for healthcare im
 - Lagos and Kebbi recorded the highest number of patient admissions.
 - Southern states generally recorded higher treatment costs than northern states.
 
-
-## 💡 Recommendations
+## 📋 Recommendations
 
 - Strengthen malaria prevention programs, especially in high-admission states. 
 - Expand access to health insurance schemes to reduce out-of-pocket payments.  
@@ -229,6 +228,8 @@ This page summarizes key findings and provides recommendations for healthcare im
 - Increase early diagnosis and treatment programs for tuberculosis to reduce long hospital stays and mortality rates.  
 - Address regional healthcare disparities by improving facilities in high-burden but lower-resource states.  
 - Promote preventive healthcare to reduce long-term treatment costs and hospital admissions.  
+
+
 
 ## 📬 Contact Me
 - 📧 Email: oshomotunrayo647@gmail.com
