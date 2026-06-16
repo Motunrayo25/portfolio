@@ -1,15 +1,21 @@
-# Hi I am Motunrayo Osho
+#  Hi, I'm Motunrayo Osho
 ## Data Analyst (Excel | SQL | Power BI)
 
-Data Analyst based in Nigeria with a knack for transforming messy datasets into clear, interactive business strategies. Hands-on experience using Excel, SQL and Power BI to clean, analyze and visualize data. Open to global remote opportunities.
+Junior Data Analyst based in Nigeria with experience transforming raw data into actionable insights through data cleaning, analysis and visualization. Skilled in using Excel, SQL and Power BI to uncover trends, build dashboards and support data-driven decision-making.
 
-## 🛠️ Skills
+Currently building portfolio projects in healthcare analytics while seeking remote Data Analyst opportunities.
 
-- Microsoft Excel
-- SQL
-- Power BI
+🛠️ Technical Skills
 
-## 📁 My Projects
+**Excel:** Pivot Tables, XLOOKUP, Conditional Formatting, Data Visualization
+
+**SQL:** Data Querying, Aggregate Functions, GROUP BY, CASE Statements, Data Exploration
+
+**Power BI:** Data Modeling, DAX, KPI Development, Interactive Dashboards
+
+**Analytics:** Data Cleaning, EDA, Data Validation, Business Insights, Reporting
+
+## 📊 Featured Project
 
 ### 📊 Data Analysis
 
@@ -18,23 +24,26 @@ Data Analyst based in Nigeria with a knack for transforming messy datasets into 
 [![Project Status: Completed](https://img.shields.io/badge/Project%20Status-Completed-success)](https://github.com/Motunrayo25)
 
 ### 📌 Project Overview
-This project analyzes 1,000 Nigerian healthcare patient records across 30 states to uncover insights on diagnoses, treatment costs, payment methods and patient outcomes.
-The analysis was carried out using Excel for data cleaning, SQL for querying and analysis and Power BI for interactive dashboard reporting.
+This project analyzes 1,000 healthcare patient records across 29 Nigerian states and Abuja (FCT) to uncover patterns in disease prevalence, treatment costs, hospital utilization, payment methods, and patient outcomes.
+The project demonstrates a complete analytics workflow from data cleaning and preparation to SQL analysis and dashboard development.
 
-### 🎯 Problem Statement
-Healthcare providers and policymakers in Nigeria require data-driven insights to better understand healthcare patterns and improve decision-making
-This analysis aims to answer the following questions:
+### Business Objective
+
+Healthcare providers and policymakers require data-driven insights to improve healthcare planning, resource allocation and patient outcomes.
+
+This analysis focuses on answering key business questions:
+
 - Which diseases are most common across Nigeria?
-- Which diagnoses have the highest treatment costs?
+- Which diagnoses generate the highest treatment costs?
 - How do treatment costs differ between public and private hospitals?
 - Which states record the highest patient admissions?
 - How are healthcare expenses funded?
 - What factors are associated with poorer treatment outcomes?
 
 ### 🛠️ Tools Used
-- Microsoft Excel — Data cleaning and preprocessing
-- SQL — Data querying and analysis
-- Power BI — Data visualization and dashboard creation
+- Microsoft Excel — Data cleaning & Preparation
+- SQL	— Data querying and analysis
+- Power BI — Dashboard Development & Reporting
 
 ### Project Files
 
@@ -43,43 +52,92 @@ This analysis aims to answer the following questions:
 - [Power BI Dashboard](powerbi_dashboard/Nigerian_Healthcare_Dashboard.pbix)
 - [View Dashboard PDF](powerbi_dashboard/Nigerian_Healthcare_Dashboard.pdf)
 
+### 📊 Dataset Information
 
-### 📊 Data Source
+A synthetic healthcare dataset was used to simulate patient records across multiple regions of Nigeria.
 
-Synthetic healthcare dataset designed to simulate Nigerian patient records across multiple regions.
-Dataset characteristics:
+Dataset Characteristics:
 - 1,000 patient records
 - 15 diagnosis categories
 - 30 Nigerian states
-- Data period: October 2025 – April 2026
-- Variables include patient demographics, diagnosis, treatment cost, hospital type, payment method, length of stay and treatment outcome
-  
-## Data Preprocessing (Excel) 
+- October 2025 – April 2026
+- Patient demographics
+- Diagnosis information
+- Treatment costs
+- Hospital type
+- Payment method
+- Length of stay
+- Treatment outcomes
 
-The Excel file is structured into three sheets:
+Note: A synthetic dataset was used to simulate healthcare records across Nigeria due to privacy restrictions on real patient data.
 
-- **Raw Data** — Original unprocessed dataset
-- **Cleaned Data** — Data after cleaning and standardization
-- **Pivot Tables** — Summary tables used for analysis and insights
+🧹 Data Preparation (Excel)
 
-### Cleaning Steps Performed
-- Checked for missing values
-- Checked for duplicate records
+Data Cleaning Tasks
+- Checked for missing values — Result: 0 missing values found
+- Removed duplicate records — Result: 0 duplicates found
+- Checked for blank cells — Result: 0 blank cells found
 - Standardized date formats
-- Formatted treatment cost values
-- Built pivot tables for diagnosis, cost and demographic summaries
-- Structured dataset for SQL analysis and Power BI reporting
+- Validated treatment cost values
+- Created summary pivot tables
+- Structured data for SQL analysis and Power BI reporting
 
+## 🗄️ SQL Analysis
 
-## SQL Analysis
+SQL Techniques Used
 
-### SQL Techniques Used
-- Aggregate Functions
-- GROUP BY
-- ORDER BY
-- CASE Statements
-- Date Functions
-  
+- Aggregate functions for cost and mortality analysis
+- GROUP BY for diagnosis, region, and hospital segmentation
+- CASE statements for patient age grouping and outcome categorization
+- Date functions for trend-based analysis across months
+- ORDER BY for ranking diseases, cost drivers and high-admission regions
+
+Example Query
+
+Disease Distribution
+
+SELECT 
+    Diagnosis,
+    COUNT(*) AS Total_Patients,
+    ROUND(COUNT(*) * 100.0 / 1000, 1) AS percentage
+FROM patients
+GROUP BY Diagnosis
+ORDER BY Total_Patients DESC;
+
+Age Group Analysis
+
+SELECT 
+    CASE 
+        WHEN age BETWEEN 18 AND 30 THEN '18-30 Young Adults'
+        WHEN age BETWEEN 31 AND 45 THEN '31-45 Middle Aged'
+        WHEN age BETWEEN 46 AND 60 THEN '46-60 Older Adults'
+        WHEN age BETWEEN 61 AND 75 THEN '61-75 Elderly'
+    END AS Age_Group,
+    COUNT(*) AS Total_Patients,
+    ROUND(AVG(Treatment_Cost_NGN), 0) AS Avg_Cost_NGN
+FROM patients
+GROUP BY Age_Group
+ORDER BY Total_Patients DESC;
+
+Mortality Analysis
+
+SELECT 
+    Diagnosis,
+    COUNT(*) AS Total_Patients,
+    SUM(CASE 
+        WHEN Treatment_Outcome = 'Deceased' THEN 1 
+        ELSE 0 
+    END) AS Total_Deaths,
+    ROUND(
+        SUM(CASE 
+            WHEN Treatment_Outcome = 'Deceased' THEN 1 
+            ELSE 0 
+        END) * 100.0 / COUNT(*), 1
+    ) AS Mortality_Rate_Percent
+FROM patients
+GROUP BY Diagnosis
+ORDER BY Mortality_Rate_Percent DESC;
+
 ## SQL Queries (Evidence)
 
 Full query screenshots:
@@ -87,79 +145,29 @@ Full query screenshots:
 
 ## 🗄️ SQL Findings
 
-### Diagnosis Distribution
-- Most common: Malaria (170 patients — 17.0%)  
-- Least common: Sepsis (10 patients — 1.0%)  
-- Top 3 diagnoses (Malaria, Typhoid, Hypertension) account for 43.7% of cases  
+### Disease Trends
+- Malaria accounted for 17% of all admissions, making it the most common diagnosis.
+- Malaria, Typhoid and Hypertension represented over 43% of total cases.
 
-### Average Treatment Cost
-- Most expensive: Heart Disease (₦872,781)  
-- Least expensive: Malaria (₦50,802)  
-- Top costly conditions are all chronic diseases  
+### Treatment Costs
+- Heart Disease recorded the highest average treatment cost (₦872,781).
+- Private hospitals were approximately 70% more expensive than public hospitals.
 
-### Public vs Private Hospitals
-- Private: 112 patients | Avg ₦496,330 | Stay 8.9 days  
-- Public: 883 patients | Avg ₦290,664 | Stay 9.4 days  
-- Private hospitals cost ~70% more than public hospitals  
+### Patient Outcomes
+- Overall recovery rate was 47.7%.
+- Tuberculosis recorded the highest mortality rate (41.2%).
+- Chronic diseases were associated with longer hospital stays and poorer outcomes.
 
-### Top 10 States by Admissions
-- Highest: Kebbi & Lagos (45 each)  
-- Lowest in top list: Delta (37)  
-- Northern states appear frequently in top admissions list  
-
-### Payment Method Distribution
-- HMO: 21.1%  
-- Out-of-pocket: 20.8%  
-- NHIS: 20.8%  
-- Family Support: 19.4%  
-- NGO/Charity: 17.9%  
-
-### Treatment Outcomes
-- Recovered: 47.7%  
-- Managing: 23.8%  
-- Partially Recovered: 19.9%  
-- Deceased: 8.6%  
-
-### Age Group Analysis
-- 46–60 years: highest admissions (289 patients)  
-- 61–75 years: 265 patients  
-- 18–30 years: 236 patients  
-- 31–45 years: lowest admissions (210 patients)  
-
-### Mortality Rate by Diagnosis
-- Tuberculosis: 41.2% (highest)  
-- Stroke: 32.9%  
-- Heart Disease: 32.4%  
-- Sepsis: 30.0%  
-- Kidney Disease: 27.8%  
-- Others (Malaria, Typhoid, HIV/AIDS, etc.): 0%  
-
-### Monthly Admission Trends
-- Highest: February 2026 (168 patients)  
-- Lowest: April 2026 (92 patients)  
-- Overall stable trend between 135–168 admissions monthly  
-
-### Most Expensive States
-- Highest: Delta (₦431,229 average cost)  
-- Lagos and Abuja also among top cost locations  
-- Southern states dominate higher-cost regions  
-
-### Gender Analysis
-- Male: 530 patients (53%) | Avg ₦303,205  
-- Female: 470 patients (47%) | Avg ₦325,532  
-- Females show higher average treatment cost despite lower admissions  
-
-### Average Length of Stay
-- Longest: Tuberculosis (20.3 days)  
-- Shortest: Anaemia (4.5 days)  
-- Chronic diseases require significantly longer hospital stays  
+### Demographics & Geography
+- Patients aged 46–60 represented the largest admission group.
+- Lagos and Kebbi recorded the highest patient admissions.
+- Southern states generally reported higher treatment costs than northern states.
 
 ## 📊 Power BI Dashboard
 
 The cleaned dataset was imported into Power BI to create an interactive dashboard for monitoring healthcare trends across Nigeria.
 
-### KPIs
-
+### Dashboard KPIs
 - Total Patients
 - Total Treatment Cost
 - Average Treatment Cost
@@ -167,55 +175,46 @@ The cleaned dataset was imported into Power BI to create an interactive dashboar
 - Mortality Rate
 - Average Length of Stay
 
-### Visualizations
-
+### Dashboard Visualizations
 - Patient Count by Diagnosis
 - Average Treatment Cost by Diagnosis
-- Payment Method Distribution
-- Top 10 States by Patient Admissions
+- Top 10 States by Admissions
 - Monthly Admission Trends
+- Payment Method Distribution
 - Average Treatment Cost by Hospital Type
 
 ### Interactive Features
-
-- State filtering
-- Diagnosis filtering
+- State Filtering
+- Diagnosis Filtering
+- Cross-Filtering Across Visuals
 
 ## Dashboard Preview
 
-A 3-page interactive dashboard was built featuring:
-- KPI cards (Total Patients, Costs, Recovery & Mortality Rates)
-- Interactive State and Diagnosis filters
-- Cross-filtering across all visuals
-
 ### Page 1 — Overview
 
-This page shows a summary of healthcare trends in Nigeria, including patient distribution, payment methods and monthly admissions
+Shows overall patient volume, admission trends, and payment method distribution in the Nigerian healthcare system from October 2025 to April 2026. This helps identify demand patterns and funding behavior across the system.
 
 ![Dashboard Overview](powerbi_dashboard/dashboard_overview.png)
 
 ### Page 2 — Geo-Costs
 
-This page explores treatment cost differences across diagnoses and states, highlighting regional demand patterns.
+Shows treatment cost differences across diagnoses, hospital types, and states, including top admission states. Helps identify spending concentration and regional variation.
 
 ![Geo Costs](powerbi_dashboard/dashboard_geo_costs.png)
 
 ### Page 3 — Insights & Recommendations
 
-This page summarizes key findings and provides recommendations for healthcare improvement.
+Summarizes key insights from the analysis and provides recommendations for healthcare planning.
 
 ![Insights](powerbi_dashboard/dashboard_insights.png)
 
 ## 💡 Key Insights
 
-- Malaria was the most common diagnosis, accounting for 17% of all admissions.
-- Heart Disease recorded the highest average treatment cost at ₦872,781.
-- Private hospitals cost approximately 70% more than public hospitals.
-- Tuberculosis had the highest mortality rate (41.2%).
-- Patients aged 46–60 represented the largest admission group.
-- HMO was the most frequently used payment method.
-- Lagos and Kebbi recorded the highest number of patient admissions.
-- Southern states generally recorded higher treatment costs than northern states.
+- Infectious diseases especially malaria, dominate hospital admissions, indicating a sustained public health burden.
+- Treatment cost varies significantly across hospital types, with private facilities consistently more expensive.
+- Tuberculosis shows disproportionately high mortality compared to other conditions, making it a key risk area.
+- Middle-aged patients (46–60) represent the highest utilization group, suggesting higher healthcare demand in this segment.
+- Regional differences exist in healthcare cost and utilization, with southern states showing higher treatment costs than northern regions.
 
 ## 📋 Recommendations
 
@@ -229,10 +228,10 @@ This page summarizes key findings and provides recommendations for healthcare im
 
 ## 📬 Contact Me
 
-I am open to remote opportunities worldwide in Data Analysis. Feel free to reach out — I respond within 24 hours!
-
+I am open to remote Data Analyst opportunities and collaborations.
+ 
 - 📧 Email: oshomotunrayo647@gmail.com
-- 📍 Location: Nigeria (Lagos & Ibadan)
+- 📍 Location: Nigeria 
 - 🌍 Availability: Open to Remote Opportunities Worldwide
 - 🐙 GitHub: github.com/Motunrayo25
 
