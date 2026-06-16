@@ -23,7 +23,7 @@ select * from patients limit 10;
 select 
 	Diagnosis,
     count(*) as Total_Patients,
-    round(count(*) * 100.0/1000,1) as percentage
+    round(count(*) * 100.0/(select count(*) from patients), 1) as percentage
 from patients
 group by Diagnosis
 order by Total_Patients desc;
