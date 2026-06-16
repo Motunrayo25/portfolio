@@ -83,7 +83,7 @@ The Excel file is structured into three sheets:
 ## SQL Queries (Evidence)
 
 Full query screenshots:
-[View SQL Query Screenshots](images/sql)
+[View SQL Query Screenshots](images)
 
 ## 🗄️ SQL Findings
 
