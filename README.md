@@ -191,19 +191,19 @@ A 3-page interactive dashboard was built featuring:
 
 This page shows a summary of healthcare trends in Nigeria, including patient distribution, payment methods and monthly admissions
 
-![Dashboard Overview](dashboard_overview.png)
+![Dashboard Overview](powerbi_dashboard/dashboard_overview.png)
 
 ### Page 2 — Geo-Costs
 
 This page explores treatment cost differences across diagnoses and states, highlighting regional demand patterns.
 
-![Geo Costs](dashboard_geo_costs.png)
+![Geo Costs](powerbi_dashboard/dashboard_geo_costs.png)
 
 ### Page 3 — Insights & Recommendations
 
 This page summarizes key findings and provides recommendations for healthcare improvement.
 
-![Insights](dashboard_insights.png)
+![Insights](powerbi_dashboard/dashboard_insights.png)
 
 ## 💡 Key Insights
 
@@ -226,11 +226,18 @@ This page summarizes key findings and provides recommendations for healthcare im
 - Address regional healthcare disparities by improving facilities in high-burden but lower-resource states.  
 - Promote preventive healthcare to reduce long-term treatment costs and hospital admissions.  
 
-
-
 ## 📬 Contact Me
+
+I am open to remote opportunities worldwide in Data Analysis. Feel free to reach out — I respond within 24 hours!
+
 - 📧 Email: oshomotunrayo647@gmail.com
-- 📍 Location: Nigeria
-- 🌍 Open to Remote Opportunities Worldwide
+- 📍 Location: Nigeria (Lagos & Ibadan)
+- 🌍 Availability: Open to Remote Opportunities Worldwide
+- 🐙 GitHub: github.com/Motunrayo25
+
+
+
+
+
 
 
