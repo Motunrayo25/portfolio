@@ -40,7 +40,7 @@ This analysis aims to answer the following questions:
 
 - [SQL Queries](healthcare_analysis.sql)
 - [Dataset](Nigerian_Healthcare_Data.xlsx)
-- [Power BI Dashboard](healthcare_dashboard.pbix)
+- [Power BI Dashboard](powerbi_dashboard/Nigerian_Healthcare_Dashboard.pbix)
 
 
 ### 📊 Data Source
