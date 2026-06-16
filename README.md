@@ -1,10 +1,7 @@
 # Hi I am Motunrayo Osho
 ## Data Analyst (Excel | SQL | Power BI)
 
-Data Analyst based in Nigeria with a knack for transforming messy datasets into clear, interactive business strategies. Proficient in executing end-to-end data pipelines using Excel, SQL, and Power BI. Open to global remote roles.
-
-I am a Data Analyst based in Nigeria, focused on transforming data into actionable insights using Excel, SQL, and Power BI.
-Open to remote Data Analyst opportunities worldwide.
+Data Analyst based in Nigeria with a knack for transforming messy datasets into clear, interactive business strategies. Hands-on experience using Excel, SQL and Power BI to clean, analyze and visualize data. Open to global remote opportunities.
 
 ## 🛠️ Skills
 
