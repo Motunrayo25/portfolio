@@ -97,11 +97,11 @@ Example Query
 Disease Distribution
 
 SELECT 
-    Diagnosis,
-    COUNT(*) AS Total_Patients,
-    ROUND(COUNT(*) * 100.0 / 1000, 1) AS percentage
-FROM patients
-GROUP BY Diagnosis
+    Diagnosis, 
+    COUNT(*) AS Total_Patients, 
+    ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM patients), 1) AS percentage 
+FROM patients 
+GROUP BY Diagnosis 
 ORDER BY Total_Patients DESC;
 
 Age Group Analysis
